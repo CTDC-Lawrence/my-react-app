@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Dropdown from './Dropdown/Dropdown.js';
 
+const images = [
+  // Your image objects
+];
+
 // This is our Navbar component
 function Navbar() {
   return (
@@ -14,7 +18,11 @@ function Navbar() {
         <li><Link to="/services">Services</Link></li>
         <li>
           <Dropdown label="Frameworks">
-            <Link to="/">Image Carousel</Link>
+            {images.map((image, index) => (
+              <Link key={index} to={`/${image.title.toLowerCase()}`}>
+                {image.title}
+              </Link>
+            ))}
           </Dropdown>
         </li>
         <li><Link to="/free-samples">Free Samples</Link></li>
@@ -25,4 +33,5 @@ function Navbar() {
 }
 
 export default Navbar;
+
 

@@ -7,6 +7,17 @@ import Carousel from './components/Carousel/Carousel';
 import CookiePolicy from './components/CookiePolicy';
 import TermsOfService from './components/TermsOfService';
 import PrivacyPolicy from './components/PrivacyPolicy';
+import Agile from './components/pages/Agile';
+import DevOps from './components/pages/DevOps';
+import Dojo from './components/pages/Dojo';
+import Kanban from './components/pages/Kanban';
+import Lean from './components/pages/Lean';
+import Projects from './components/pages/Projects';
+import Scrum from './components/pages/Scrum';
+import SixSigma from './components/pages/SixSigma';
+import Spotify from './components/pages/Spotify';
+import Waterfall from './components/pages/Waterfall';
+
 
 const images = [
   {
@@ -86,6 +97,16 @@ function App() {
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/agile" element={<Agile />} />
+          <Route path="/devops" element={<DevOps />} />
+          <Route path="/dojo" element={<Dojo />} />
+          <Route path="/Kanban" element={<Kanban />} />
+          <Route path="/Lean" element={<Lean />} />
+          <Route path="/Projects" element={<Projects />} />
+          <Route path="/Scrum" element={<Scrum />} />
+          <Route path="/SixSigma" element={<SixSigma />} />
+          <Route path="/Spotify" element={<Spotify />} />
+          <Route path="/Waterfall" element={<Waterfall />} />
         </Routes>
         <Footer />
       </div>
