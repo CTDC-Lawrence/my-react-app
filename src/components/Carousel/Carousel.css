@@ -1,0 +1,26 @@
+.carousel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .carousel-card {
+    flex: 1;
+    max-width: 300px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .carousel-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .carousel-card-info {
+    padding: 16px;
+  }
+  
