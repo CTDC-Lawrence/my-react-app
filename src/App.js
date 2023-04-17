@@ -10,7 +10,11 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App" 
+      style={{
+        backgroundImage: `url(${process.env.PUBLIC_URL}/images/cube2Image.png)`,
+      }}
+      >
         <Navbar />
         <Routes>
           {/* Your other routes will go here */}
