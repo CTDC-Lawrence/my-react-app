@@ -1,12 +1,20 @@
 /* Footer styles */
 .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    background-color: #d9874c;
-    color: #fff;
-    text-align: center;
-    margin-top: auto; /* This will push the footer to the bottom if there's extra space */
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #d9874c;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  margin-top: auto; /* This will push the footer to the bottom if there's extra space */
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  margin: 0 5px;
+}
