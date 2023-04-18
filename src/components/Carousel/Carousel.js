@@ -1,20 +1,21 @@
 import React from 'react';
-import './Carousel.css';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Link } from 'react-router-dom';
 
-const Carousel = ({ images }) => {
+const CustomCarousel = ({ images, titles }) => {
   return (
-    <div className="carousel">
+    <Carousel>
       {images.map((image, index) => (
-        <div key={index} className="carousel-card">
-          <img src={image.url} alt={image.alt} />
-          <div className="carousel-card-info">
-            <h3>{image.title}</h3>
-            <p>{image.description}</p>
-          </div>
+        <div key={index}>
+          <Link to={`/${titles[index].replace(/\s+/g, '')}`}>
+            <img src={image} alt={titles[index]} />
+            <p className="legend" style={{ fontWeight: 'bold' }}>{titles[index]}</p>
+          </Link>
         </div>
       ))}
-    </div>
+    </Carousel>
   );
 };
 
-export default Carousel;
+export default CustomCarousel;

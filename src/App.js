@@ -6,45 +6,47 @@ import Footer from './components/Footer';
 import CookiePolicy from './components/CookiePolicy';
 import TermsOfService from './components/TermsOfService';
 import PrivacyPolicy from './components/PrivacyPolicy';
+import Carousel from './components/Carousel/Carousel';
+import { frameworks } from "./data/frameworks";
 
 // Import your framework components
-import Agile from './frameworks/Agile.js';
-import DevOps from './frameworks/DevOps.js';
-import Dojo from './frameworks/Dojo.js';
-import Kanban from './frameworks/Kanban.js';
-import Lean from './frameworks/Lean.js';
-import Projects from './frameworks/Projects.js';
-import Scrum from './frameworks/Scrum.js';
-import SixSigma from './frameworks/SixSigma.js';
-import Spotify from './frameworks/Spotify.js';
-import Waterfall from './frameworks/Waterfall.js';
+import Agile from './components/frameworks/Agile';
+import DevOps from './components/frameworks/DevOps';
+import Dojo from './components/frameworks/Dojo';
+import Kanban from './components/frameworks/Kanban';
+import Lean from './components/frameworks/Lean';
+import Projects from './components/frameworks/Projects';
+import Scrum from './components/frameworks/Scrum';
+import SixSigma from './components/frameworks/SixSigma';
+import Spotify from './components/frameworks/Spotify';
+import Waterfall from './components/frameworks/Waterfall';
 
 
 function App() {
   return (
     <Router>
-      <div className="App" 
+      <div className="App"
       style={{
         backgroundImage: `url(${process.env.PUBLIC_URL}/images/cube2Image.png)`,
-      }}
-      >
-        <Navbar />
+      }}>
+        <Navbar frameworks={frameworks} />
         <Routes>
           {/* Your other routes will go here */}
-          <Route path="/Agile.js" component={Agile} />
-          <Route path="/DevOps" component={DevOps} />
-          <Route path="/Dojo" component={Dojo} />
-          <Route path="/Kanban" component={Kanban} />
-          <Route path="/Lean" component={Lean} />
-          <Route path="/Projects" component={Projects} />
-          <Route path="/Scrum" component={Scrum} />
-          <Route path="/SixSigma" component={SixSigma} />
-          <Route path="/Spotify" component={Spotify} />
-          <Route path="/Waterfall" component={Waterfall} />
+          <Route path="/Agile" element={<Agile />} />
+          <Route path="/DevOps" element={<DevOps />} />
+          <Route path="/Dojo" element={<Dojo />} />
+          <Route path="/Kanban" element={<Kanban />} />
+          <Route path="/Lean" element={<Lean />} />
+          <Route path="/Projects" element={<Projects />} />
+          <Route path="/Scrum" element={<Scrum />} />
+          <Route path="/SixSigma" element={<SixSigma />} />
+          <Route path="/Spotify" element={<Spotify />} />
+          <Route path="/Waterfall" element={<Waterfall />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
+        <Carousel images={frameworks.map((framework) => framework.image)} />
         <Footer />
       </div>
     </Router>
