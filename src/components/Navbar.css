@@ -14,8 +14,11 @@
   .navbar-links {
     list-style-type: none;
     display: flex;
-    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
     color: #fff;
+    margin-right: 2rem; /* add some margin on the right side */
   }
   
   .navbar-links a, .navbar .dropdown-toggle {

@@ -1,6 +1,7 @@
 .dropdown-menu {
     position: relative;
     display: inline-block;
+    width: 100%;
   }
   
   .dropdown-toggle {
@@ -18,10 +19,11 @@
     display: block;
     list-style: none;
     margin: 0;
-    min-width: 160px;
+    min-width: 120px;
     padding: 0;
     position: absolute;
     z-index: 1;
+    width: 50%;
   }
   
   .dropdown-items li {

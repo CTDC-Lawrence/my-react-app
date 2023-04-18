@@ -40,9 +40,10 @@ const contactOptions = [
 function Navbar({ frameworks }) {
   return (
     <nav className="navbar">
-      <h1>CTDC</h1>
+      <Link to="/">
+        <h1>CTDC</h1>
+      </Link>
       <ul className="navbar-links">
-        <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
         <li>
           <DropdownMenu label="Services" items={services} />

@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import CookiePolicy from './components/CookiePolicy';
 import TermsOfService from './components/TermsOfService';
 import PrivacyPolicy from './components/PrivacyPolicy';
-import Carousel from './components/Carousel/Carousel';
+import { CustomCarousel as Carousel } from './components/Carousel/CustomCarousel';
 import { frameworks } from "./data/frameworks";
 
 // Import your framework components
@@ -27,7 +27,8 @@ function App() {
     <Router>
       <div className="App"
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL}/images/cube2Image.png)`,
+        backgroundImage: `url(${process.env.PUBLIC_URL}/images/mars.png)`,
+        backgroundSize: '96%',
       }}>
         <Navbar frameworks={frameworks} />
         <Routes>
@@ -45,8 +46,11 @@ function App() {
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        </Routes>
-        <Carousel images={frameworks.map((framework) => framework.image)} />
+          </Routes>
+        <Carousel
+          images={frameworks.map((framework) => framework.url)}
+          titles={frameworks.map((framework) => framework.title)}
+        />
         <Footer />
       </div>
     </Router>
@@ -54,5 +58,3 @@ function App() {
 }
 
 export default App;
-
-
