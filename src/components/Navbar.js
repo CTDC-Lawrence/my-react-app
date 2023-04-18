@@ -4,17 +4,16 @@ import './Navbar.css';
 import DropdownMenu from './DropdownMenu/DropdownMenu';
 
 const services = [
-  { label: "Agile Coaching", path: "/service-1" },
-  { label: "Artificial Intelligence", path: "/service-2" },
-  { label: "Digital Automation", path: "/service-3" },
-  { label: "Project Management", path: "/service-4" },
-  { label: "Process Improvement", path: "/service-5" },
-  { label: "Six Sigma Quality", path: "/service-6" },
-  { label: "Scrum Implementation", path: "/service-7" },
-  { label: "Kanban Planning", path: "/service-8" },
-  { label: "Training & Curriculum", path: "/service-9" },
-  { label: "Content Development", path: "/service-10" },
-  // Add more service objects here
+  { label: "Agile Coaching", path: "/agile-coaching" },
+  { label: "Artificial Intelligence", path: "/artificial-intelligence" },
+  { label: "Digital Automation", path: "/digital-automation" },
+  { label: "Project Management", path: "/project-management" },
+  { label: "Process Improvement", path: "/process-improvement" },
+  { label: "Six Sigma Quality", path: "/six-sigma-quality" },
+  { label: "Scrum Implementation", path: "/scrum-implementation" },
+  { label: "Kanban Planning", path: "/kanban-planning" },
+  { label: "Training & Curriculum", path: "/training-curriculum" },
+  { label: "Content Development", path: "/content-development" },
 ];
 
 const freeSamples = [
