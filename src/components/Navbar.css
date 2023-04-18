@@ -15,10 +15,12 @@
     list-style-type: none;
     display: flex;
     gap: 1rem;
+    color: #fff;
   }
   
-  .navbar-links a {
+  .navbar-links a, .navbar .dropdown-toggle {
     color: #fff;
     text-decoration: none;
   }
+  
   
