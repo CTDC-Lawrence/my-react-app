@@ -45,7 +45,13 @@ function Navbar({ frameworks }) {
       <ul className="navbar-links">
         <li><Link to="/about">About</Link></li>
         <li>
-          <DropdownMenu label="Services" items={services} />
+        <DropdownMenu
+          label="Services"
+          items={services.map((service) => ({
+            label: service.label,
+            path: `/services/${service.label.replace(/\s+/g, '')}`,
+         }))}
+        />
         </li>
         <li>
           <DropdownMenu
