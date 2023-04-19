@@ -6,21 +6,20 @@ function Footer() {
   return (
     <footer className="footer">
       {/* Footer sections container */}
-      <div className="footer-sections">
-        
+      <div className="footer-sections">       
         {/* Footer left section */}
         <div className="footer-left">
-          <div className="footer-nav-links">
-            {/* Footer navigation links */}
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/services">Services</Link>
-            <Link to="/frameworks">Frameworks</Link>
-            <Link to="/free-samples">Free Samples</Link>
-            <Link to="/contact">Contact</Link>
-          </div>
+          <Link to="/" className="footer-link">
+            <h3>Connect the Dots Club</h3>
+          </Link>
+          <nav className="footer-left-nav-links">
+            <Link to="/about" className="footer-link">About</Link>  
+            <Link to="/services" className="footer-link">Services</Link>
+            <Link to="/frameworks" className="footer-link">Frameworks</Link>
+            <Link to="/free-samples" className="footer-link">Free Samples</Link>
+            <Link to="/contact" className="footer-link">Contact</Link>                   
+          </nav>
         </div>
-
         {/* Footer middle section */}
         <div className="footer-middle">
           
@@ -43,7 +42,7 @@ function Footer() {
               <img src={`${process.env.PUBLIC_URL}/images/linkedin-in.svg`} alt="LinkedIn" />
             </a>
           </div>
-
+        
           {/* Footer links */}
           <div className="footer-links">
             <Link className="footer-link" to="/cookie-policy">
@@ -58,13 +57,14 @@ function Footer() {
               Privacy Policy
             </Link>
           </div>
-
+        
           {/* Copyright notice */}
-          <p>
+          <p className="copywrite">
             &copy; {new Date().getFullYear()} Connect the Dots Club. All rights
-            reserved.{" "}
+            reserved.
           </p>
         </div>
+        
 
         {/* Footer right section */}
         <div className="footer-right">

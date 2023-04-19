@@ -1,4 +1,4 @@
-export const frameworks = [
+export const Frameworks = [
         {
           url: 'images/agile.png',
           alt: 'Agilists Planning',

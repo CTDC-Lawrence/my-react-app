@@ -6,20 +6,20 @@ import Footer from './components/Footer';
 import CookiePolicy from './components/CookiePolicy';
 import TermsOfService from './components/TermsOfService';
 import PrivacyPolicy from './components/PrivacyPolicy';
-import { CustomCarousel as Carousel } from './components/Carousel/CustomCarousel';
-import { frameworks } from "./data/frameworks";
+import About from './components/About/About';
+import { Frameworks } from "./data/Frameworks";
 
 // Import your framework components
-import Agile from './components/frameworks/Agile';
-import DevOps from './components/frameworks/DevOps';
-import Dojo from './components/frameworks/Dojo';
-import Kanban from './components/frameworks/Kanban';
-import Lean from './components/frameworks/Lean';
-import Projects from './components/frameworks/Projects';
-import Scrum from './components/frameworks/Scrum';
-import SixSigma from './components/frameworks/SixSigma';
-import Spotify from './components/frameworks/Spotify';
-import Waterfall from './components/frameworks/Waterfall';
+import Agile from './components/Frameworks/Agile';
+import DevOps from './components/Frameworks/DevOps';
+import Dojo from './components/Frameworks/Dojo';
+import Kanban from './components/Frameworks/Kanban';
+import Lean from './components/Frameworks/Lean';
+import Projects from './components/Frameworks/Projects';
+import Scrum from './components/Frameworks/Scrum';
+import SixSigma from './components/Frameworks/SixSigma';
+import Spotify from './components/Frameworks/Spotify';
+import Waterfall from './components/Frameworks/Waterfall';
 
 
 function App() {
@@ -30,8 +30,10 @@ function App() {
         backgroundImage: `url(${process.env.PUBLIC_URL}/images/mars.png)`,
         backgroundSize: '96%',
       }}>
-        <Navbar frameworks={frameworks} />
+        <Navbar Frameworks={Frameworks} />
         <Routes>
+          <Route path="/" element={<h1>Welcome to the Home page!</h1>} />
+          <Route path="/about" element={<About />} />
           {/* Your other routes will go here */}
           <Route path="/Agile" element={<Agile />} />
           <Route path="/DevOps" element={<DevOps />} />
@@ -46,11 +48,7 @@ function App() {
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          </Routes>
-        <Carousel
-          images={frameworks.map((framework) => framework.url)}
-          titles={frameworks.map((framework) => framework.title)}
-        />
+        </Routes>
         <Footer />
       </div>
     </Router>

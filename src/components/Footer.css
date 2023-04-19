@@ -2,7 +2,7 @@
 .footer {
   display: flex; /* Make the footer a flex container */
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   padding: 1rem;
   background-color: #d9874c;
   flex-direction: column;
@@ -19,13 +19,31 @@
   flex-wrap: wrap;
 }
 
+.footer-middle {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin: 0 20px;
+  gap: 1rem; /* Add this line to create more space between the elements */
+}
+
+
 .footer-left,
-.footer-middle,
 .footer-right {
   flex: 1;
   display: flex;
   flex-direction: column;
+  align-self: center;
   margin: 0 20px;
+}
+
+.footer-left-nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 20px;
 }
 
 .footer-nav-links,
@@ -53,9 +71,43 @@
   transition: opacity 0.3s;
 }
 
-.social-media-links img:hover {
-  opacity: 0.7;
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
+
+.social-media-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid transparent;
+  border-radius: 50%;
+  transition: border-color 0.3s;
+}
+
+.social-media-links a:hover {
+  border-color: #1abc9c;
+}
+
+.social-media-links img {
+  width: 100%;
+  height: 100%;
+}
+
+.copywrite {
+  margin-top: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.copywrite:hover {
+  color: #1abc9c;
+}
+
+
 
 .footer-links {
   display: flex;
@@ -71,4 +123,13 @@
 .footer-right {
   display: flex;
   justify-content: flex-end;
+}
+
+.copywrite-text {
+  color: white;
+  transition: color 0.3s;
+}
+
+.copywrite-text:hover {
+  color: #1abc9c;
 }

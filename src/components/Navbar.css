@@ -1,29 +1,36 @@
 /* Navbar styles */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #1c4e91;
-  }
-  
-  .navbar h1 {
-    color: #fff;
-  }
-  
-  .navbar-links {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 4rem;
-    color: #fff;
-    margin-right: 2rem; /* add some margin on the right side */
-  }
-  
-  .navbar-links a, .navbar .dropdown-toggle {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c4e91;
+  padding: 1rem 2rem;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.navbar-link:hover {
+  color: #d9874c;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navbar h1:hover {
+  color: #d9874c;
+}
+
+.navbar h1 span {
+  color: #d9874c;
+  font-weight: normal;
+}
