@@ -1,4 +1,4 @@
-export const Frameworks = [
+const Frameworks = [
         {
           url: 'images/agile.png',
           alt: 'Agilists Planning',
@@ -82,5 +82,7 @@ export const Frameworks = [
         },
         // Add more image objects here
       ].sort((a, b) => a.title.localeCompare(b.title));
+
+export default Frameworks;  
 
   

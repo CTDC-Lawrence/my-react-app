@@ -2,7 +2,7 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Link } from 'react-router-dom';
-import './CustomCarousel.css';
+import './custom-carousel.css';
 
 const CustomCarousel = ({ images, titles }) => {
   return (

@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
-import Services from '../data/Services';
-import freeSamples from '../data/sampleData';
-import contactOptions from '../data/contactOptions';
+import './navbar.css';
 
-const Navbar = ({ Frameworks }) => {
+const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = (event) => {
@@ -31,7 +28,7 @@ const Navbar = ({ Frameworks }) => {
       <Link to="/services" className="navbar-link" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         Services
       </Link>
-      <Link to="/frameworks" className="navbar-link" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <Link to="/frameworks-list" className="navbar-link" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         Frameworks
       </Link>
       <Link to="/free-samples" className="navbar-link" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>

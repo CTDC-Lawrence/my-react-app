@@ -1,26 +1,28 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import CookiePolicy from './components/CookiePolicy';
-import TermsOfService from './components/TermsOfService';
-import PrivacyPolicy from './components/PrivacyPolicy';
-import About from './components/About/About';
-import { Frameworks } from "./data/Frameworks";
+import './app.css';
+import Navbar from './components/navbar';
+import Footer from './components/footer';
+import CookiePolicy from './components/cookie-policy';
+import TermsOfService from './components/terms-of-service';
+import PrivacyPolicy from './components/privacy-policy';
+import FreeSamples from './components/free-samples/free-samples';
+import FrameworkList from './components/frameworks/frameworks-list';
+import About from './components/about/about';
+import Services from './components/services/services-page';
+import Contact from './components/contact/contact';
 
 // Import your framework components
-import Agile from './components/Frameworks/Agile';
-import DevOps from './components/Frameworks/DevOps';
-import Dojo from './components/Frameworks/Dojo';
-import Kanban from './components/Frameworks/Kanban';
-import Lean from './components/Frameworks/Lean';
-import Projects from './components/Frameworks/Projects';
-import Scrum from './components/Frameworks/Scrum';
-import SixSigma from './components/Frameworks/SixSigma';
-import Spotify from './components/Frameworks/Spotify';
-import Waterfall from './components/Frameworks/Waterfall';
-
+import Agile from './components/frameworks/agile';
+import DevOps from './components/frameworks/dev-ops';
+import Dojo from './components/frameworks/dojo';
+import Kanban from './components/frameworks/kanban';
+import Lean from './components/frameworks/lean';
+import Projects from './components/frameworks/projects';
+import Scrum from './components/frameworks/scrum';
+import SixSigma from './components/frameworks/six-sigma';
+import Spotify from './components/frameworks/spotify';
+import Waterfall from './components/frameworks/waterfall';
 
 function App() {
   return (
@@ -30,26 +32,29 @@ function App() {
         backgroundImage: `url(${process.env.PUBLIC_URL}/images/mars.png)`,
         backgroundSize: '96%',
       }}>
-        <Navbar Frameworks={Frameworks} />
+        <Navbar />
         <Routes>
           <Route path="/" element={<h1>Welcome to the Home page!</h1>} />
           <Route path="/about" element={<About />} />
-          {/* Your other routes will go here */}
-          <Route path="/Agile" element={<Agile />} />
-          <Route path="/DevOps" element={<DevOps />} />
-          <Route path="/Dojo" element={<Dojo />} />
-          <Route path="/Kanban" element={<Kanban />} />
-          <Route path="/Lean" element={<Lean />} />
-          <Route path="/Projects" element={<Projects />} />
-          <Route path="/Scrum" element={<Scrum />} />
-          <Route path="/SixSigma" element={<SixSigma />} />
-          <Route path="/Spotify" element={<Spotify />} />
-          <Route path="/Waterfall" element={<Waterfall />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/frameworks-list" element={<FrameworkList />} />
+          <Route path="/free-samples" element={<FreeSamples />} />
+          <Route path="/contact" element={<Contact/>} />
+          <Route path="/agile" element={<Agile />} />
+          <Route path="/dev-ops" element={<DevOps />} />
+          <Route path="/dojo" element={<Dojo />} />
+          <Route path="/kanban" element={<Kanban />} />
+          <Route path="/lean" element={<Lean />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/scrum" element={<Scrum />} />
+          <Route path="/six-sigma" element={<SixSigma />} />
+          <Route path="/spotify" element={<Spotify />} />
+          <Route path="/waterfall" element={<Waterfall/>} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        </Routes>
-        <Footer />
+          </Routes>
+          <Footer />
       </div>
     </Router>
   );

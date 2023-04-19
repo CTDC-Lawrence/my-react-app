@@ -1,6 +1,6 @@
 import React from 'react';
-import './Contact.css';
-import { contactOptions } from '../data/contactOptions';
+import './contact.css';
+import { contactOptions } from '../../data/contact-options';
 
 const Contact = () => {
   return (

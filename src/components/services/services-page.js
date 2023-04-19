@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './ServicesPage.css';
-import services from '../data/services'; // Update the import path
+import './services-page.css';
+import services from '../../data/services';
 
 const ServicesPage = () => {
   return (

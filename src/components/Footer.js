@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import './Footer.css';
+import './footer.css';
 
 function Footer() {
   return (
@@ -17,7 +17,7 @@ function Footer() {
             <Link to="/services" className="footer-link">Services</Link>
             <Link to="/frameworks" className="footer-link">Frameworks</Link>
             <Link to="/free-samples" className="footer-link">Free Samples</Link>
-            <Link to="/contact" className="footer-link">Contact</Link>                   
+            <Link to="/contact" className="footer-link">Contact</Link>             
           </nav>
         </div>
         {/* Footer middle section */}
